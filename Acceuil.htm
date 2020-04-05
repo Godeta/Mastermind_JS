@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="acceuil_scroll.css" type="text/css" rel="stylesheet" /> <!--On lie notre fichier CSS -->
+   
     <title>Acceuil</title>
 </head>
 <body>
-    
+  
+  <h1> Acceuil</h1>
+
+    <div id="scroller">
+        <div class="nav">
+          <a class="prev">&laquo;</a>
+          <a class="next">&raquo;</a>
+        </div>
+        <a class="item" href="MasterMind.htm" target="_blank"><img src="Images/mastermind.jpg" width="500" height="200" /></a>
+        <a class="item" href="Acceuil.htm"><img src="Images/here.jpg" width ="500" height="200"/></a>
+        <a class="item" href="Explications.htm"><img src="Images/description.jpg" width="500" height="200" /></a>
+        <!-- target blank pour ouvrir github dans un nouvel onglet-->
+        <a class="item" href="https://github.com/Godeta/Mastermind_JS" target="_blank"><img src="Images/github.png" width="500" height="200" /></a> 
+
+        <!-- On peut ajouter autant d'images avec des liens que l'on veut-->
+      </div>
+      
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./js_scroll.js"></script>
 </body>
 </html>
