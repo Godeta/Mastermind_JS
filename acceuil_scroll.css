@@ -4,8 +4,7 @@ html, body {
 }
 
 body {
-  background-color: #939393;
-  background: -webkit-linear-gradient(top, #fff 0, #4D4D4D 180px, #fff 400px);                
+  background-color: #939393;                
 }
 
 h1 {
