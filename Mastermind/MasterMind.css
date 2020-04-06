@@ -22,6 +22,12 @@ input, textarea, select { border:none; padding:0; background:#fdea91; color:#5A5
 
 input, textarea, option { padding:4px 4px; font-weight:bold; color:#5A5A5A; font-size:12px;}
 
+.home {
+	position: absolute;
+	top:5%;
+	left:90%;
+}
+
 textarea {resize:none;}
 .inputs {width:200px;}
 .linputs {width:400px;}
@@ -38,7 +44,7 @@ sup, sub {font-size:9px; color:inherit;}
 img {border:0; max-width:100%; height:auto;}
 
 /* titre */
-h1 {font-size:20px; color:#0005c2;}
+h1 {font-size:40px; color:#0005c2;}
 
 /*plateau, affichage grâce à la table */
 table {border-collapse:collapse; }
@@ -47,15 +53,13 @@ table tr.selected td {background:#bfd1ff;} /*ligne en cours sur laquelle on peut
 table tr.selected td.selected {background:#6f7a96;} /*lorsque l'on clique dessus*/
 table tr td.valid {display:none;}
 table tr.selected td.valid {display:table-cell;}
-
-/*affichage du résultat et du choix de la difficulté (menu étant dans option)*/
-.result {text-align:center; font-size:30px;}
 table tr.win td {background:#43b456;}
 
 .page {font-size:0;}
 .page .game {width:50%; display:inline-block; vertical-align:top;}
 .page .options {width:50%; display:inline-block; vertical-align:top;}
-.result {text-align:center; font-size:30px;}
+/*affichage du résultat et du choix de la difficulté (menu étant dans option)*/
+.result {text-align:left; font-size:70px;}
 
 /* menu */
 .menus .menu {padding:10px 25px; margin:8px; background:#4366b4; color:white; cursor:pointer; width:200px;}

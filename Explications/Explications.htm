@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css et js pour le slide-->
+    <link rel="stylesheet" href="css/vanillaSlideshow.css">
+
+    <title>Explications</title>
+</head>
+<body>
+    <div id="vanilla-slideshow-container">
+
+        <div id="vanilla-slideshow">
+          
+          <div class="vanilla-slide">
+            <img src="images/regles.jpg" alt="Règles du jeu">
+            <div class = "textONimage"> <h2>Règles du jeu</h2>
+            <p> Texte blablabla</p> </div>
+          </div>
+      
+          <div class="vanilla-slide" >
+            <img src="images/prototype.jpg" alt="Prototypes du jeu">
+            <div class = "textONimage"> <h2>Les prototypes du jeu</h2></div>
+          </div>
+          
+          <div class="vanilla-slide" >
+            <img src="images/project.jpg" alt="Explication du projet">
+            <div class = "textONimage"> <h2>Pourquoi ce projet ?</h2></div>
+          </div>
+          
+          <div class="vanilla-slide" >
+            <img src="images/progra_lang.jpg" alt="Différents outils utilisés">
+            <div class = "textONimage"><h2>Langages utilisés</h2></div>
+          </div>
+      
+        </div>
+
+        <!-- Home bouton-->
+        <div class ="home"> <a href="../Acceuil.htm"> <img src="../Images/home.png" width="60" height="50" alt="Lien vers home"> </a></div>
+      
+        <!-- slideshow indicators -->
+        <div id="vanilla-indicators"></div>
+      
+        <!-- slideshow arrows -->
+        <div id="vanilla-slideshow-previous">
+          <img src="images/arrow-previous.png" alt="slider arrow">
+        </div>
+        <div id="vanilla-slideshow-next">
+          <img src="images/arrow-next.png" alt="slider arrow">
+        </div>
+      
+      </div>
+      <script src="js/vanillaSlideshow.min.js"></script>
+      <script> //paramètres d'initialisation
+        vanillaSlideshow.init({
+          slideshow: true,
+          delay: 15000,
+          arrows: true,
+          indicators: true,
+          random: false,
+          animationSpeed: '1s'
+        });
+      </script>
+</body>
+</html>

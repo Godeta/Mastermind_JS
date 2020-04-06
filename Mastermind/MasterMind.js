@@ -7,6 +7,8 @@ var MasterMindJS = { //Objet MastermindJS, les options sont variables ainsi on p
         4: '#ff9600', // orange
         5: '#fff000', // jaune
         6: '#0005c2', // bleu
+        7: '#00d8d5', // cyan
+        8: '#8a05fa', // violet
         },
         
         settings: {
@@ -22,11 +24,43 @@ var MasterMindJS = { //Objet MastermindJS, les options sont variables ainsi on p
         soluce: new Array(), // solution de la partie
         },
 
-        initialise: function() { //appelée une fois, directement au lancement de la fenêtre
-            this.startGame();
+        difficulties: { //les différents modes de difficulté
+            easy: {
+            lines: 12,
+            columns: 4,
+            colors: 5,
+            double: false,
+            locCheck: true,
+            },
+            normal: {
+            lines: 12,
+            columns: 4,
+            colors: 6,
+            double: true,
+            locCheck: true,
+            },
+            hard: {
+            lines: 12,
+            columns: 5,
+            colors: 8,
+            double: true,
+            locCheck: false,
+            },
+            extreme: {
+            lines: 12,
+            columns: 6,
+            colors: 8,
+            double: true,
+            locCheck: false,
+            },
             },
 
-        startGame: function() { //lance le début d'une partie avec l'affichage du plateau, remise à 0 de la partie et définition d'une solution
+        initialise: function() { //appelée une fois, directement au lancement de la fenêtre
+            this.startGame('easy');
+            },
+
+        startGame: function(difficulty) { //lance le début d'une partie avec l'affichage du plateau, remise à 0 de la partie et définition d'une solution
+                this.settings = this.difficulties[difficulty]; //on commence avec la difficulté choisie
                 this.drawGameBoard();
                 this.resetGame();
                 this.defineSoluce();
@@ -113,7 +147,10 @@ var MasterMindJS = { //Objet MastermindJS, les options sont variables ainsi on p
             defineSoluce: function() {
                 this.game['soluce'] = new Array();
                 for (i = 1; i <= this.settings['columns']; i++) {
-                color = parseInt(Math.random()*this.settings['colors'])+1;
+                color = parseInt(Math.random()*this.settings['colors'])+1; //on défini une couleur aléatoire qu'on ajoute à la liste
+                while (this.settings['double'] == false && this.game['soluce'].indexOf(color) != -1) {
+                    color = parseInt(Math.random()*this.settings['colors'])+1; //tant que la couleur est déjà dans la liste on reprend une autre couleur
+                    }
                 this.game['soluce'][i] = color;
                   }
                 },
@@ -263,8 +300,9 @@ var MasterMindJS = { //Objet MastermindJS, les options sont variables ainsi on p
                 //si on gagne
                 displayWin: function() {
                     /* Affiche le resultat dans l espace dedie, en couleur */
-                    document.getElementById('result').innerHTML = 'Gagné';
+                    document.getElementById('result').innerHTML = 'Victoire !!!';
                     document.getElementById('result').style.color = '#43b456';
+                    document.getElementById('result').style.fontSize = "100px";
                     
                     /* Affiche le marquage specific a la victoire sur la ligne courante */
                     document.getElementById('turn-'+this.game['turn']).className = 'win';
