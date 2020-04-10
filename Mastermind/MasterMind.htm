@@ -4,60 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="MasterMind.css" type="text/css" rel="stylesheet" /> <!--On lie notre fichier CSS -->
-    <script src="MasterMind.js"></script> <!-- On lie notre fichier Javascript-->
-    <script> //Lors du lancement de la fenêtre on appelle la fonction initialise dans l'objet MasterMindJS
-        window.onload = function() {
-        MasterMindJS.initialise();
-        }
         </script>
     <title>MasterMind</title>
 </head>
-<body>
-    <div class="page"> <!-- Div qui englobe toute la page-->
+<body  class="backgroundNight">
+<div class ="anim">
+      <div class="night">
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+        <div class="shooting_star"></div>
+      </div>
+	  </div>
         <h1>
             MasterMind
+			
         </h1>
-        <div>
-          &nbsp; <!-- Non Breakable SPace, un espace quoi-->
-        </div>
-        <div class="game"> <!-- Partie jeu-->
-            <table> <!-- table permet de faire apparraître les lignes avec le CSS pour l'apparence du plateau -->
-                <tbody id="plateau"> <!-- On donne un id pour que en Javascript on définisse le plateau ici-->
 
-                </tbody>
-            </table>
-            <p>
-              &nbsp;
-            </p>
-            <table>
-                <tbody id="colorSelector"> <!-- Ici le joueur va selectionner la couleur à mettre-->
-
-                </tbody>
-            </table>
-        </div>
-        <div class="options"> <!-- Partie options-->
-            <div id="result" class="result"> <!-- Partie de droite du tableau où l'on affiche les résultats-->
-
-            </div>
-
-            <div class="menus"> <!-- On choisi la difficulté-->
-                <div class="menu" onclick="MasterMindJS.startGame('easy');"> <!-- Si on clique dessus cela lance la fonction startGame de l'objet MasterMindJS avec l'option facile dans le MasterMindjs-->
-                    Jouer "Facile"
-                </div>
-                <div class="menu" onclick="MasterMindJS.startGame('normal');">
-                    Jouer "Normal"
-                </div>
-                <div class="menu" onclick="MasterMindJS.startGame('hard');">
-                    Jouer "Difficile"
-                </div>
-                <div class="menu" onclick="MasterMindJS.startGame('extreme');">
-                    Jouer "Extr&ecirc;me"
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- le mastermind-->
+    <script src="p5.min.js"></script>
+    <script src="sketch.js"></script>
 
             <!-- Home bouton-->
-            <div class ="home"> <a href="../index.html"> <img src="../Images/home.png" width="60" height="50" alt="Lien vers home"> </a></div>
+            <div class ="home"> <a href="../Acceuil.htm"> <img src="../Images/home.png" width="60" height="50" alt="Lien vers home"> </a></div>
 </body>
 </html>
