@@ -87,7 +87,7 @@ var MasterMindJS = { //Objet MastermindJS, les options sont variables ainsi on p
             cell = document.createElement('td');
             cell.innerHTML = '';
             cell.id = 'turn-'+i+'-'+j;
-            cell.style.width = '32px';
+            cell.style.width = '40px';
             cell.setAttribute('onclick', this.name+'.selectColumn('+i+', '+j+');');
             line.appendChild(cell);
             }
@@ -101,12 +101,12 @@ var MasterMindJS = { //Objet MastermindJS, les options sont variables ainsi on p
             line.appendChild(cell);
             }
             
-            //je sais pas
+            //cellule avec OK
             cell = document.createElement('td');
             cell.innerHTML = 'OK';
             cell.id = 'valid-'+i;
             cell.className = 'valid';
-            cell.style.width = '16px';
+            cell.style.width = '25px';
             cell.setAttribute('onclick', this.name+'.checkLine('+i+');');
             line.appendChild(cell);
             
