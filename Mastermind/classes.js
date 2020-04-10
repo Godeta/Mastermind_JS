@@ -1,25 +1,25 @@
-function selectedColor(x) { //prend en paramètre r,g,b,p,y,br,bl,w
-  if (x == "r") { //rouge
+function selectedColor(x) { //prend en paramètre un chiffre entre 1 et 8 r,g,b,p,y,br,bl,w
+  if (x == "1") { //rouge
     fill(255, 0, 0);
-  } else if (x == "b") {
+  } else if (x == "2") {
     fill(0, 0, 255);
   } //bleu
-  else if (x == "b") {
+  else if (x == "3") {
     fill(0, 255, 0);
   } //vert
-  else if (x == "b") {
+  else if (x == "4") {
     fill(214, 245, 17);
   } //jaune
-  else if (x == "b") {
+  else if (x == "5") {
     fill(164, 25, 143);
   } //violet
-  else if (x == "b") {
+  else if (x == "6") {
     fill(100, 66, 34);
   } //marron
-  else if (x == "b") {
+  else if (x == "7") {
     fill(0);
   } //noir
-  else if (x == "b") {
+  else if (x == "8") {
     fill(255);
   } //blanc
 }
@@ -85,7 +85,12 @@ class caseChoice {
     this.x = x;
     this.y = y;
     this.s = side;
-    selectedColor(col);
+    this.col = col;
+    
+  }
+    show() {
+      noStroke();
+      selectedColor(this.col);
     rect(this.x, this.y, this.s, this.s);
   }
 }
