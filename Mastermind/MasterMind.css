@@ -9,6 +9,12 @@ h1 {
 	left:90%;
 }
 
+.rules {
+	position: absolute;
+	top:4%;
+	left:82%;
+}
+
 /*les étoiles que tu aimes Paul*/
 .backgroundNight {
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);

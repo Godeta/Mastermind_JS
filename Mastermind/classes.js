@@ -57,11 +57,11 @@ class caseMaster {
     this.x = x;
     this.y = y;
     this.s = side;
-    this.col =0;
-    
+    this.col = 0;
+
   }
-  show () {
-    fill(150,0,200,this.col);
+  show() {
+    fill(150, 0, 200, this.col);
     rect(this.x, this.y, this.s, this.s);
   }
 }
@@ -74,7 +74,7 @@ class caseResult {
     this.y = y;
     this.s = side;
   }
-  show () {
+  show() {
     rect(this.x, this.y, this.s, this.s);
   }
 }
@@ -109,6 +109,6 @@ class Button {
     noStroke();
     fill(255);
     textSize(15);
-    text(this.sent, this.x+10, this.y+20);
+    text(this.sent, this.x + 10, this.y + 20);
   }
 }
